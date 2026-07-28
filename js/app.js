@@ -11,6 +11,68 @@
   const PHONE_NUMBER = '+32492948804';
   const WHATSAPP_NUMBER = '32492948804';
 
+  const CITY_KEY_MAP = {
+    'bruxelles': 'bruxelles',
+    'brussel': 'bruxelles',
+    'brussels': 'bruxelles',
+    
+    'louvain': 'louvain',
+    'leuven': 'louvain',
+
+    'bruxelles — 1000': 'bruxellesZip',
+    'brussel — 1000': 'bruxellesZip',
+    'brussels — 1000': 'bruxellesZip',
+
+    'louvain — 3000': 'louvainZip',
+    'leuven — 3000': 'louvainZip',
+
+    'bruxelles-ville — 1000': 'bruxellesVille',
+    'brussel-stad — 1000': 'bruxellesVille',
+    'brussels-city — 1000': 'bruxellesVille',
+
+    'anderlecht — 1070': 'anderlecht',
+    'auderghem — 1160': 'auderghem',
+    'oudergem — 1160': 'auderghem',
+    'berchem-sainte-agathe — 1082': 'berchemSainteAgathe',
+    'sint-agatha-berchem — 1082': 'berchemSainteAgathe',
+    'berchem-saint-agatha — 1082': 'berchemSainteAgathe',
+    'etterbeek — 1040': 'etterbeek',
+    'evere — 1140': 'evere',
+    'forest — 1190': 'forest',
+    'vorst — 1190': 'forest',
+    'ganshoren — 1083': 'ganshoren',
+    'ixelles — 1050': 'ixelles',
+    'elsene — 1050': 'ixelles',
+    'jette — 1090': 'jette',
+    'koekelberg — 1081': 'koekelberg',
+    'molenbeek-saint-jean — 1080': 'molenbeek',
+    'sint-jans-molenbeek — 1080': 'molenbeek',
+    'saint-gilles — 1060': 'saintGilles',
+    'sint-gillis — 1060': 'saintGilles',
+    'saint-josse-ten-noode — 1210': 'saintJosse',
+    'sint-joost-ten-node — 1210': 'saintJosse',
+    'schaerbeek — 1030': 'schaerbeek',
+    'schaarbeek — 1030': 'schaerbeek',
+    'uccle — 1180': 'uccle',
+    'ukkel — 1180': 'uccle',
+    'watermael-boitsfort — 1170': 'watermaelBoitsfort',
+    'watermaal-bosvoorde — 1170': 'watermaelBoitsfort',
+    'woluwe-saint-lambert — 1200': 'woluweSaintLambert',
+    'sint-lambrechts-woluwe — 1200': 'woluweSaintLambert',
+    'woluwe-saint-pierre — 1150': 'woluweSaintPierre',
+    'sint-pieters-woluwe — 1150': 'woluweSaintPierre'
+  };
+
+  function getCityTranslatedName(rawName, lang) {
+    if (!rawName) return '';
+    const norm = rawName.trim().toLowerCase();
+    const cityKey = CITY_KEY_MAP[norm];
+    if (cityKey && window.TRANSLATIONS && window.TRANSLATIONS[lang] && window.TRANSLATIONS[lang].cities && window.TRANSLATIONS[lang].cities[cityKey]) {
+      return window.TRANSLATIONS[lang].cities[cityKey];
+    }
+    return rawName;
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     initLanguageSwitcher();
     initFAQAccordion();
@@ -80,6 +142,23 @@
         }
       }
     });
+
+    if (window.selectedCommune) {
+      const selectionBadge = document.getElementById('bxlSelectionBadge');
+      const badgeTextEl = document.getElementById('bxlActiveBadgeText') || (selectionBadge ? selectionBadge.querySelector('.active-badge-text') : null);
+      const translatedCity = getCityTranslatedName(window.selectedCommune, currentLang);
+      if (badgeTextEl && selectionBadge && !selectionBadge.hidden) {
+        const prefix = currentLang === 'en' ? 'Breakdown assistance ready for' : (currentLang === 'nl' ? 'Pechverhelping gereed voor' : 'Dépannage prêt pour');
+        const suffix = currentLang === 'en' ? 'Recovery driver en route' : (currentLang === 'nl' ? 'Takeldienst onderweg' : 'Dépanneur en route');
+        badgeTextEl.innerHTML = `${prefix} <strong id="bxlActiveCommuneName">${translatedCity}</strong> — ${suffix}`;
+      }
+
+      const bxlComboboxValue = document.getElementById('bxlComboboxValue');
+      const trigger = document.getElementById('bxlComboboxTrigger');
+      if (bxlComboboxValue && trigger && trigger.classList.contains('has-value')) {
+        bxlComboboxValue.textContent = translatedCity;
+      }
+    }
   }
 
   function getNestedValue(obj, path) {
@@ -146,20 +225,8 @@
   }
 
   function updateRadarForCity(city) {
-    const statusLine = document.getElementById('radarStatusLine');
     const etaVal = document.getElementById('radarEtaVal');
-    if (!statusLine) return;
-
-    if (currentLang === 'fr') {
-      statusLine.innerHTML = `🟢 Patrouille détectée à proximité de <strong>${city}</strong>`;
-      if (etaVal) etaVal.textContent = '~15 - 25 min';
-    } else if (currentLang === 'nl') {
-      statusLine.innerHTML = `🟢 Patrouille gedetecteerd nabij <strong>${city}</strong>`;
-      if (etaVal) etaVal.textContent = '~15 - 25 min';
-    } else {
-      statusLine.innerHTML = `🟢 Patrol unit active near <strong>${city}</strong>`;
-      if (etaVal) etaVal.textContent = '~15 - 25 min';
-    }
+    if (etaVal) etaVal.textContent = '15–25 min';
   }
 
   function dispatchCityEmergency(cityName, triggerElement) {
@@ -172,11 +239,13 @@
       triggerElement.style.opacity = '0.7';
     }
 
+    const translatedCityName = getCityTranslatedName(cityName, currentLang);
+
     const fallbackMsg = currentLang === 'fr'
-      ? `Bonjour, j'ai besoin d'un dépannage d'urgence à ${cityName}.\n📍 [Partagez votre position via le bouton "+" de WhatsApp]`
+      ? `Bonjour, j'ai besoin d'un dépannage d'urgence à ${translatedCityName}.\n📍 [Partagez votre position via le bouton "+" de WhatsApp]`
       : currentLang === 'nl'
-      ? `Hallo, ik heb dringende pechverhelping nodig in ${cityName}.\n📍 [Deel uw locatie via de "+"-knop in WhatsApp]`
-      : `Hello, I need emergency roadside assistance in ${cityName}.\n📍 [Share your location via the "+" button in WhatsApp]`;
+      ? `Hallo, ik heb dringende pechverhelping nodig in ${translatedCityName}.\n📍 [Deel uw locatie via de "+"-knop in WhatsApp]`
+      : `Hello, I need emergency roadside assistance in ${translatedCityName}.\n📍 [Share your location via the "+" button in WhatsApp]`;
 
     function restoreBtn() {
       if (triggerElement) {
@@ -372,8 +441,14 @@
           }
         });
 
-        if (selectionBadge && activeCommuneName) {
-          activeCommuneName.textContent = val;
+        if (selectionBadge) {
+          const badgeTextEl = document.getElementById('bxlActiveBadgeText') || selectionBadge.querySelector('.active-badge-text');
+          if (badgeTextEl) {
+            const prefix = currentLang === 'en' ? 'Breakdown assistance ready for' : (currentLang === 'nl' ? 'Pechverhelping gereed voor' : 'Dépannage prêt pour');
+            const suffix = currentLang === 'en' ? 'Recovery driver en route' : (currentLang === 'nl' ? 'Takeldienst onderweg' : 'Dépanneur en route');
+            const translatedCity = getCityTranslatedName(val, currentLang);
+            badgeTextEl.innerHTML = `${prefix} <strong id="bxlActiveCommuneName">${translatedCity}</strong> — ${suffix}`;
+          }
           selectionBadge.hidden = false;
         }
 
