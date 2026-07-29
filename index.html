@@ -58,7 +58,9 @@
       { "@type": "City", "name": "Schaerbeek" },
       { "@type": "City", "name": "Anderlecht" },
       { "@type": "City", "name": "Uccle" },
-      { "@type": "City", "name": "Tervuren" }
+      { "@type": "City", "name": "Tervuren" },
+      { "@type": "City", "name": "Kampenhout" },
+      { "@type": "City", "name": "Boortmeerbeek" }
     ],
     "sameAs": [
       "https://wa.me/32492948804",
@@ -135,7 +137,7 @@
         <div class="hero-content">
           <h1 class="hero-title">
             <span data-i18n="hero.titleStart">Dépannage Voiture à Bruxelles et Louvain –</span><br>
-            <span data-i18n="hero.titleHighlight">Arrivée estimée en 15–25 min</span>
+            <span data-i18n="hero.titleHighlight">Arrivée estimée en <span style="white-space: nowrap;">15–25 min</span></span>
           </h1>
           
           <p class="hero-subtitle" data-i18n="hero.subtitle">
@@ -216,7 +218,7 @@
                 </div>
 
                 <div class="bxl-combobox-meta">
-                  <span class="bxl-combobox-meta-count" id="bxlComboboxCount" data-i18n="hero.communesAvailable">39 zones d'intervention 24/7</span>
+                  <span class="bxl-combobox-meta-count" id="bxlComboboxCount" data-i18n="hero.communesAvailable">41 zones d'intervention 24/7</span>
                 </div>
 
                 <ul class="bxl-combobox-list" id="bxlComboboxList" role="listbox" aria-label="Communes et villes d'intervention">
@@ -420,6 +422,17 @@
                     <span class="option-label">Veltem-Beisem — 3020</span>
                     <span class="option-check">✓</span>
                   </li>
+                  <li class="bxl-combobox-option" role="option" data-value="Kampenhout" id="opt-kampenhout" tabindex="-1">
+                    <span class="option-icon" style="display:inline-flex;align-items:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                    <span class="option-label">Kampenhout — 1910</span>
+                    <span class="option-check">✓</span>
+                  </li>
+                  <li class="bxl-combobox-option" role="option" data-value="Boortmeerbeek" id="opt-boortmeerbeek" tabindex="-1">
+                    <span class="option-icon" style="display:inline-flex;align-items:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                    <span class="option-label">Boortmeerbeek — 3190</span>
+                    <span class="option-check">✓</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
@@ -499,12 +512,12 @@
                 </div>
               </div>
               <p class="review-body-text" data-i18n="reviews.r1Text">
-                « Je suis tombé en panne à Schaerbeek en pleine soirée. J’ai appelé un service de dépannage et ils sont venus sans traîner. Le gars était sympa et efficace. »
+                « Je suis tombé en panne à Zaventem en pleine soirée. J’ai appelé un service de dépannage et ils sont venus sans traîner. Le gars était sympa et efficace. »
               </p>
             </div>
             <div class="review-author-box">
               <div class="review-author-name" data-i18n="reviews.r1Author">Jules L.</div>
-              <div class="review-author-city"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-1px;margin-right:4px;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="reviews.r1City">Schaerbeek</span></div>
+              <div class="review-author-city"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-1px;margin-right:4px;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="reviews.r1City">Zaventem</span></div>
             </div>
           </div>
 
@@ -668,19 +681,19 @@
   <section class="section-padding section-bg-alt">
     <div class="container">
       <div class="section-header">
-        <span class="section-label" data-i18n="situations.label">DÉPANNAGE ROUTIER À BRUXELLES</span>
+        <span class="section-label" data-i18n="situations.label">DÉPANNAGE ROUTIER & ASSISTANCE 24/7</span>
         <h2 class="section-title" data-i18n="situations.title">De quel service de dépannage avez-vous besoin ?</h2>
-        <p class="section-desc" data-i18n="situations.desc">Sélectionnez votre situation pour demander rapidement un dépannage voiture, un remorquage ou une assistance routière à Bruxelles.</p>
+        <p class="section-desc" data-i18n="situations.desc">Sélectionnez votre situation pour demander rapidement un dépannage voiture, un remorquage ou une assistance routière avec Dépannage24.be.</p>
       </div>
 
       <div class="situation-grid">
         <!-- Card 1: Remorquage Auto -->
         <div class="situation-card" onclick="triggerSituation('towing')">
           <div class="situation-icon-box">
-            <img src="images/remorquage-auto-depannage-24.png" alt="Remorquage voiture à Bruxelles" class="situation-icon-img">
+            <img src="images/remorquage-auto-depannage-24.png" alt="Remorquage voiture" class="situation-icon-img">
           </div>
           <div>
-            <h3 class="situation-card-title" data-i18n="situations.card2Title">Remorquage voiture à Bruxelles</h3>
+            <h3 class="situation-card-title" data-i18n="situations.card2Title">Remorquage voiture</h3>
             <p class="situation-card-desc" data-i18n="situations.card2Desc">Transport sécurisé vers un garage, votre domicile ou l’adresse de votre choix.</p>
           </div>
           <span class="situation-action-btn"><span data-i18n="situations.card2Btn">Demander un remorquage</span> →</span>
@@ -689,10 +702,10 @@
         <!-- Card 2: Batterie à plat -->
         <div class="situation-card" onclick="triggerSituation('battery')">
           <div class="situation-icon-box">
-            <img src="images/batterie-a-plat-depannage-24.png" alt="Dépannage batterie à Bruxelles" class="situation-icon-img">
+            <img src="images/batterie-a-plat-depannage-24.png" alt="Dépannage batterie" class="situation-icon-img">
           </div>
           <div>
-            <h3 class="situation-card-title" data-i18n="situations.card1Title">Dépannage batterie à Bruxelles</h3>
+            <h3 class="situation-card-title" data-i18n="situations.card1Title">Dépannage batterie</h3>
             <p class="situation-card-desc" data-i18n="situations.card1Desc">Batterie à plat, problème de démarrage, d’allumage ou panne mécanique.</p>
           </div>
           <span class="situation-action-btn"><span data-i18n="situations.card1Btn">Demander un dépannage</span> →</span>
@@ -713,10 +726,10 @@
         <!-- Card 4: Panne Carburant -->
         <div class="situation-card" onclick="triggerSituation('fuel')">
           <div class="situation-icon-box">
-            <img src="images/panne-essence-depannage-24.png" alt="Livraison de carburant à Bruxelles" class="situation-icon-img">
+            <img src="images/panne-essence-depannage-24.png" alt="Livraison de carburant" class="situation-icon-img">
           </div>
           <div>
-            <h3 class="situation-card-title" data-i18n="situations.card4Title">Livraison de carburant à Bruxelles</h3>
+            <h3 class="situation-card-title" data-i18n="situations.card4Title">Livraison de carburant</h3>
             <p class="situation-card-desc" data-i18n="situations.card4Desc">Livraison d’essence ou de diesel pour vous permettre de reprendre la route.</p>
           </div>
           <span class="situation-action-btn"><span data-i18n="situations.card4Btn">Demander du carburant</span> →</span>
@@ -753,7 +766,7 @@
             <div class="step-number-bg">01</div>
             <span class="step-tag" data-i18n="howItWorks.step1Tag">Étape 1</span>
             <h3 class="step-h3" data-i18n="howItWorks.step1Title">Vous nous appelez</h3>
-            <p class="step-text" data-i18n="howItWorks.step1Text">Appelez-nous au <a href="tel:+32492948804" class="text-phone-link">+32 492 94 88 04</a> et décrivez votre panne en quelques mots. Indiquez votre position, le type de véhicule et ce qui s’est passé. Nous vous expliquons immédiatement la suite de l’intervention.</p>
+            <p class="step-text" data-i18n="howItWorks.step1Text">Appelez-nous au <a href="tel:+32492948804" class="text-phone-link" style="white-space: nowrap;">+32 492 94 88 04</a> et décrivez votre panne en quelques mots. Indiquez votre position, le type de véhicule et ce qui s’est passé. Nous vous expliquons immédiatement la suite de l’intervention.</p>
             <p class="step-extra-text" data-i18n="howItWorks.step1Extra">Lorsqu’un tarif ferme peut être établi à distance, il vous est communiqué avant le départ du véhicule. Si un diagnostic sur place est nécessaire, nous vous expliquons clairement comment le prix sera calculé.</p>
             <a href="tel:+32492948804" class="step-cta-btn">
               <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
@@ -1017,6 +1030,16 @@
             <span class="city-pill-icon" style="display:inline-flex;align-items:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
             <span>Veltem-Beisem</span>
           </button>
+
+          <button type="button" class="city-pill" data-city="Kampenhout" aria-label="Dépannage automobile à Kampenhout">
+            <span class="city-pill-icon" style="display:inline-flex;align-items:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span>Kampenhout</span>
+          </button>
+
+          <button type="button" class="city-pill" data-city="Boortmeerbeek" aria-label="Dépannage automobile à Boortmeerbeek">
+            <span class="city-pill-icon" style="display:inline-flex;align-items:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span>Boortmeerbeek</span>
+          </button>
         </div>
 
         <div class="area-call-box">
@@ -1202,9 +1225,9 @@
           <!-- Photo 6 -->
           <div class="gallery-card">
             <div class="gallery-img-wrap">
-              <img src="images/dépannage-voiture-schaerbeek.png" alt="Dépannage voiture Schaerbeek" class="gallery-img" loading="lazy">
+              <img src="images/dépannage-voiture-zaventem.png" alt="Dépannage voiture Zaventem" class="gallery-img" loading="lazy">
               <div class="gallery-img-overlay">
-                <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-1px"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> <span data-i18n="cities.schaerbeekShort">Schaerbeek</span></span>
+                <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-1px"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> <span data-i18n="cities.zaventem">Zaventem</span></span>
               </div>
             </div>
           </div>
@@ -1255,110 +1278,110 @@
         <!-- Q1 -->
         <div class="faq-item active">
           <div class="faq-question">
-            <span data-i18n="faq.q1">Dans quelles zones proposez-vous le dépannage automobile à Bruxelles et à Louvain ?</span>
+            <span data-i18n="faq.q1">Dans quelles zones intervenez-vous ?</span>
             <span class="faq-icon">▼</span>
           </div>
           <div class="faq-answer" data-i18n="faq.a1">
-            Dépannage24.be intervient partout à Bruxelles, notamment à Bruxelles-Ville, Anderlecht, Auderghem, Berchem-Sainte-Agathe, Etterbeek, Evere, Forest, Ganshoren, Ixelles, Jette, Koekelberg, Molenbeek-Saint-Jean, Saint-Gilles, Saint-Josse-ten-Noode, Schaerbeek, Uccle, Watermael-Boitsfort, Woluwe-Saint-Lambert et Woluwe-Saint-Pierre. Nous intervenons également à Louvain, aussi appelée Leuven, notamment à Heverlee, Kessel-Lo, Wilsele et Wijgmaal, ainsi que dans l’ensemble de la zone située entre Bruxelles et Louvain. Notre zone d’intervention comprend notamment Zaventem, Diegem, Machelen, Vilvorde, Kraainem, Wezembeek-Oppem, Tervuren, Sterrebeek, Kortenberg, Erps-Kwerps, Nossegem, Bertem, Leefdaal, Everberg, Vossem, Duisburg, Herent, Winksele et Veltem-Beisem. Selon la situation, notre dépanneur peut intervenir sur place ou envoyer une dépanneuse afin de transporter votre véhicule vers le garage ou l’adresse de votre choix.
+            Dépannage 24 intervient partout à Bruxelles, notamment à Bruxelles-Ville, Anderlecht, Auderghem, Berchem-Sainte-Agathe, Etterbeek, Evere, Forest, Ganshoren, Ixelles, Jette, Koekelberg, Molenbeek-Saint-Jean, Saint-Gilles, Saint-Josse-ten-Noode, Schaerbeek, Uccle, Watermael-Boitsfort, Woluwe-Saint-Lambert et Woluwe-Saint-Pierre.<br><br>Nous intervenons également à Louvain, notamment à Heverlee, Kessel-Lo, Wilsele et Wijgmaal. Notre service couvre aussi l’ensemble de la zone située entre Bruxelles et Louvain, notamment Zaventem, Diegem, Machelen, Vilvorde, Kraainem, Wezembeek-Oppem, Tervuren, Sterrebeek, Kortenberg, Erps-Kwerps, Nossegem, Bertem, Leefdaal, Everberg, Vossem, Duisburg, Herent, Winksele, Veltem-Beisem et Boortmeerbeek.<br><br>Selon la situation, notre dépanneur peut intervenir directement sur place ou envoyer une dépanneuse afin de transporter votre véhicule vers le garage ou l’adresse de votre choix.
           </div>
         </div>
 
         <!-- Q2 -->
         <div class="faq-item">
           <div class="faq-question">
-            <span data-i18n="faq.q2">Quels services de dépannage automobile proposez-vous à Bruxelles et à Louvain ?</span>
+            <span data-i18n="faq.q2">Quels types de dépannage proposez-vous ?</span>
             <span class="faq-icon">▼</span>
           </div>
           <div class="faq-answer" data-i18n="faq.a2">
-            Nous proposons un service complet pour les véhicules en panne, immobilisés ou accidentés. Nos prestations comprennent le diagnostic visuel, la réparation sur place lorsque cela est possible, le démarrage de batterie, le changement de roue, la livraison de carburant, le remorquage de voiture, le transport de véhicule et l’assistance après accident. Notre dépanneur se déplace avec le matériel adapté à la situation décrite lors de votre appel. Si la panne ne peut pas être résolue sur place, nous pouvons remorquer votre véhicule vers le garage ou l’adresse convenus.
+            Nous proposons un service complet pour les véhicules en panne, immobilisés ou accidentés. Nos prestations comprennent le diagnostic visuel, la réparation sur place lorsque cela est possible, le démarrage de batterie, le changement de roue, la livraison de carburant, le remorquage de voiture, le transport de véhicule et l’assistance après un accident.<br><br>Notre dépanneur se déplace avec le matériel adapté à la situation décrite lors de votre appel. Si la panne ne peut pas être résolue sur place, nous pouvons remorquer votre véhicule vers le garage ou l’adresse convenus.
           </div>
         </div>
 
         <!-- Q3 -->
         <div class="faq-item">
           <div class="faq-question">
-            <span data-i18n="faq.q3">En combien de temps une dépanneuse peut-elle arriver à Bruxelles ou à Louvain ?</span>
+            <span data-i18n="faq.q3">Quel est le délai d’arrivée d’une dépanneuse ?</span>
             <span class="faq-icon">▼</span>
           </div>
           <div class="faq-answer" data-i18n="faq.a3">
-            Une estimation du délai d’arrivée vous est communiquée au moment de votre appel. Le délai réel dépend de votre position exacte, de la circulation, de la distance à parcourir et de la disponibilité de nos véhicules d’intervention. Dans de nombreuses situations à Bruxelles, l’arrivée de la dépanneuse est estimée entre 15 et 25 minutes. Pour Louvain et les autres zones desservies, nous vous communiquons une estimation aussi précise que possible après réception de votre localisation GPS.
+            Une estimation du délai d’arrivée vous est communiquée au moment de votre appel. Le délai réel dépend de votre position exacte, de la circulation, de la distance à parcourir et de la disponibilité de nos véhicules d’intervention.<br><br>Dans de nombreuses situations à Bruxelles, l’arrivée de la dépanneuse est estimée entre 15 et 25 minutes. Pour Louvain, Zaventem, Boortmeerbeek et les autres zones desservies, nous vous communiquons une estimation aussi précise que possible après réception de votre localisation GPS.
           </div>
         </div>
 
         <!-- Q4 -->
         <div class="faq-item">
           <div class="faq-question">
-            <span data-i18n="faq.q4">Votre service de dépannage automobile est-il disponible 24h/24 et 7j/7 ?</span>
+            <span data-i18n="faq.q4">Êtes-vous disponibles à toute heure ?</span>
             <span class="faq-icon">▼</span>
           </div>
           <div class="faq-answer" data-i18n="faq.a4">
-            Oui, notre service de dépannage automobile et de remorquage est disponible 24 heures sur 24 et 7 jours sur 7 à Bruxelles, Louvain et dans les zones voisines. Vous pouvez nous contacter la nuit, le week-end, le dimanche et les jours fériés. Appelez le <a href="tel:+32492948804" class="text-phone-link">+32 492 94 88 04</a>, expliquez brièvement la situation et indiquez votre position, le type de véhicule et la panne rencontrée.
+            Oui, notre service de dépannage automobile et de remorquage est disponible 24 heures sur 24 et 7 jours sur 7 dans toute notre zone d’intervention.<br><br>Vous pouvez nous contacter la nuit, le week-end, le dimanche et les jours fériés. Appelez le <a href="tel:+32492948804" class="text-phone-link" style="white-space: nowrap;">+32 492 94 88 04</a>, expliquez brièvement la situation et indiquez votre position, le type de véhicule et la panne rencontrée.
           </div>
         </div>
 
         <!-- Q5 -->
         <div class="faq-item">
           <div class="faq-question">
-            <span data-i18n="faq.q5">Pouvez-vous réparer ma voiture directement sur place ?</span>
+            <span data-i18n="faq.q5">Pouvez-vous réparer mon véhicule directement sur place ?</span>
             <span class="faq-icon">▼</span>
           </div>
           <div class="faq-answer" data-i18n="faq.a5">
-            Oui, lorsque cela est possible, notre dépanneur effectue un diagnostic visuel et tente de résoudre la panne directement sur place. Nous pouvons notamment intervenir pour une batterie déchargée, une roue crevée ou un réservoir vide. Si une réparation plus importante est nécessaire, nous vous expliquons les solutions possibles avant toute intervention. Votre véhicule peut ensuite être remorqué vers le garage de votre choix, votre domicile ou une autre adresse convenue.
+            Oui. Lorsque cela est possible, notre dépanneur effectue un diagnostic visuel et tente de résoudre la panne directement sur place.<br><br>Nous pouvons notamment intervenir en cas de batterie déchargée, de roue crevée ou de réservoir vide. Si une réparation plus importante est nécessaire, nous vous expliquons les solutions possibles avant toute intervention. Votre véhicule peut ensuite être remorqué vers le garage de votre choix, votre domicile ou une autre adresse convenue.
           </div>
         </div>
 
         <!-- Q6 -->
         <div class="faq-item">
           <div class="faq-question">
-            <span data-i18n="faq.q6">Proposez-vous le démarrage de batterie et le changement de roue ?</span>
+            <span data-i18n="faq.q6">Intervenez-vous pour une batterie déchargée ou une roue crevée ?</span>
             <span class="faq-icon">▼</span>
           </div>
           <div class="faq-answer" data-i18n="faq.a6">
-            Oui, nous proposons un service de démarrage de batterie à l’aide d’un booster professionnel afin de faire repartir votre moteur rapidement. Nous pouvons également intervenir en cas de crevaison pour changer la roue, à condition qu’une roue de secours adaptée soit disponible et que l’intervention puisse être réalisée en toute sécurité. Si votre véhicule ne peut pas reprendre la route, nous pouvons organiser son remorquage.
+            Oui, nous proposons un service de démarrage de batterie à l’aide d’un booster professionnel afin de faire repartir votre moteur rapidement.<br><br>Nous pouvons également intervenir en cas de crevaison pour changer la roue, à condition qu’une roue de secours adaptée soit disponible et que l’intervention puisse être réalisée en toute sécurité. Si votre véhicule ne peut pas reprendre la route, nous pouvons organiser son remorquage.
           </div>
         </div>
 
         <!-- Q7 -->
         <div class="faq-item">
           <div class="faq-question">
-            <span data-i18n="faq.q7">Pouvez-vous livrer du carburant en cas de panne sèche ?</span>
+            <span data-i18n="faq.q7">Pouvez-vous m’apporter du carburant en cas de panne sèche ?</span>
             <span class="faq-icon">▼</span>
           </div>
           <div class="faq-answer" data-i18n="faq.a7">
-            Oui, nous pouvons apporter le carburant approprié lorsque votre réservoir est vide. Lors de votre appel, indiquez le type de carburant utilisé par votre véhicule ainsi que votre localisation exacte. Après la livraison, le dépanneur vérifie si le véhicule peut redémarrer. Si un autre problème empêche le démarrage, nous pouvons proposer une assistance complémentaire ou un remorquage.
+            Oui, nous pouvons vous apporter le carburant approprié lorsque votre réservoir est vide.<br><br>Lors de votre appel, indiquez le type de carburant utilisé par votre véhicule ainsi que votre localisation exacte. Après la livraison, le dépanneur vérifie si le véhicule peut redémarrer. Si un autre problème empêche le démarrage, nous pouvons proposer une assistance complémentaire ou un remorquage.
           </div>
         </div>
 
         <!-- Q8 -->
         <div class="faq-item">
           <div class="faq-question">
-            <span data-i18n="faq.q8">Pouvez-vous remorquer ma voiture vers le garage de mon choix ?</span>
+            <span data-i18n="faq.q8">Puis-je choisir le garage où mon véhicule sera remorqué ?</span>
             <span class="faq-icon">▼</span>
           </div>
           <div class="faq-answer" data-i18n="faq.a8">
-            Oui, notre service de remorquage à Bruxelles et à Louvain vous permet de choisir la destination de votre véhicule. Nous pouvons le transporter vers votre garage habituel, un concessionnaire, un atelier spécialisé, votre domicile ou une autre adresse convenue. Nous prenons en charge les véhicules en panne, accidentés ou immobilisés. Nous proposons également le transport longue distance et le transfert de véhicules non immatriculés.
+            Oui, vous pouvez choisir la destination de votre véhicule.<br><br>Nous pouvons le transporter vers votre garage habituel, un concessionnaire, un atelier spécialisé, votre domicile ou une autre adresse convenue. Nous prenons en charge les véhicules en panne, accidentés ou immobilisés. Nous proposons également le transport longue distance et le transfert de véhicules non immatriculés.
           </div>
         </div>
 
         <!-- Q9 -->
         <div class="faq-item">
           <div class="faq-question">
-            <span data-i18n="faq.q9">Comment est calculé le prix d’un dépannage ou d’un remorquage ?</span>
+            <span data-i18n="faq.q9">Comment le prix de l’intervention est-il calculé ?</span>
             <span class="faq-icon">▼</span>
           </div>
           <div class="faq-answer" data-i18n="faq.a9">
-            Le prix dépend du type d’intervention, de la localisation et de l’état du véhicule, de la distance à parcourir, de l’heure de l’appel et du matériel nécessaire. Lorsqu’un tarif ferme peut être établi à distance, il vous est communiqué avant le départ du véhicule d’intervention. Si un diagnostic sur place est nécessaire, nous vous expliquons clairement comment le prix sera calculé. Aucun travail supplémentaire n’est effectué sans votre accord.
+            Le prix dépend du type d’intervention, de la localisation et de l’état du véhicule, de la distance à parcourir, de l’heure de l’appel et du matériel nécessaire.<br><br>Lorsqu’un tarif ferme peut être établi à distance, il vous est communiqué avant le départ du véhicule d’intervention. Si un diagnostic sur place est nécessaire, nous vous expliquons clairement comment le prix sera calculé. Aucun travail supplémentaire n’est effectué sans votre accord.
           </div>
         </div>
 
         <!-- Q10 -->
         <div class="faq-item">
           <div class="faq-question">
-            <span data-i18n="faq.q10">Que faire si ma voiture tombe en panne à Bruxelles ou à Louvain ?</span>
+            <span data-i18n="faq.q10">Que dois-je faire si mon véhicule tombe en panne ?</span>
             <span class="faq-icon">▼</span>
           </div>
           <div class="faq-answer" data-i18n="faq.a10">
-            Appelez le <a href="tel:+32492948804" class="text-phone-link">+32 492 94 88 04</a> et communiquez votre position exacte, le type de véhicule et une brève description de la panne. Vous pouvez également envoyer directement votre localisation GPS par WhatsApp, même si vous ne connaissez pas l’adresse exacte. Un dépanneur disponible sera envoyé avec le matériel adapté. Selon la situation, nous pouvons effectuer un dépannage sur place, un démarrage de batterie, un changement de roue, une livraison de carburant ou un remorquage. Dépannage24.be peut également partager avec vous la localisation du véhicule d’intervention afin que vous puissiez suivre l’arrivée du dépanneur.
+            Appelez le <a href="tel:+32492948804" class="text-phone-link" style="white-space: nowrap;">+32 492 94 88 04</a> et communiquez votre position exacte, le type de véhicule ainsi qu’une brève description de la panne. Vous pouvez également envoyer directement votre localisation GPS par WhatsApp, même si vous ne connaissez pas l’adresse exacte.<br><br>Un dépanneur disponible sera envoyé avec le matériel adapté. Selon la situation, nous pouvons effectuer un dépannage sur place, un démarrage de batterie, un changement de roue, une livraison de carburant ou un remorquage.<br><br>Dépannage 24 peut également partager avec vous la localisation du véhicule d’intervention afin que vous puissiez suivre l’arrivée du dépanneur.
           </div>
         </div>
       </div>
@@ -1466,8 +1489,59 @@
             <a href="tel:+32492948804" class="commune-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-1px;margin-right:4px;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Kraainem</span></a>
             <a href="tel:+32492948804" class="commune-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-1px;margin-right:4px;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Kortenberg</span></a>
             <a href="tel:+32492948804" class="commune-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-1px;margin-right:4px;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Herent</span></a>
+            <a href="tel:+32492948804" class="commune-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-1px;margin-right:4px;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Kampenhout</span></a>
+            <a href="tel:+32492948804" class="commune-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-1px;margin-right:4px;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Boortmeerbeek</span></a>
           </div>
 
+        </div>
+      </div>
+
+      <!-- PAYMENT METHODS BLOCK -->
+      <div class="footer-payment-section">
+        <div class="footer-payment-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--brand-yellow)"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+          <span data-i18n="footer.paymentsTitle">Moyens de paiement acceptés sur place & à distance</span>
+        </div>
+        <div class="footer-payment-grid">
+          <div class="payment-card">
+            <div class="payment-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+            </div>
+            <div>
+              <div class="payment-card-text" data-i18n="footer.paymentCash">Cash - espèces</div>
+              <span class="payment-card-sub">Paiement au dépanneur</span>
+            </div>
+          </div>
+
+          <div class="payment-card">
+            <div class="payment-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 22 7 12 2"/><line x1="2" x2="22" y1="20" y2="20"/><line x1="4" x2="4" y1="9" y2="17"/><line x1="9" x2="9" y1="9" y2="17"/><line x1="15" x2="15" y1="9" y2="17"/><line x1="20" x2="20" y1="9" y2="17"/></svg>
+            </div>
+            <div>
+              <div class="payment-card-text" data-i18n="footer.paymentBank">Virement Bancaire</div>
+              <span class="payment-card-sub">Instant SEPA / Bank</span>
+            </div>
+          </div>
+
+          <div class="payment-card">
+            <div class="payment-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/><path d="m9 10 2 2 4-4"/></svg>
+            </div>
+            <div>
+              <div class="payment-card-text" data-i18n="footer.paymentPayconiq">Payconiq</div>
+              <span class="payment-card-sub">Paiement Mobile QR</span>
+            </div>
+          </div>
+
+          <div class="payment-card">
+            <div class="payment-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <div>
+              <div class="payment-card-text" data-i18n="footer.paymentWero">Wero - QR code</div>
+              <span class="payment-card-sub">Digital QR Payment</span>
+            </div>
+          </div>
         </div>
       </div>
 

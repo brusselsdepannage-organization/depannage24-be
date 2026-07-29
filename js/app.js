@@ -60,7 +60,11 @@
     'woluwe-saint-lambert — 1200': 'woluweSaintLambert',
     'sint-lambrechts-woluwe — 1200': 'woluweSaintLambert',
     'woluwe-saint-pierre — 1150': 'woluweSaintPierre',
-    'sint-pieters-woluwe — 1150': 'woluweSaintPierre'
+    'sint-pieters-woluwe — 1150': 'woluweSaintPierre',
+    'kampenhout': 'kampenhout',
+    'kampenhout — 1910': 'kampenhout',
+    'boortmeerbeek': 'boortmeerbeek',
+    'boortmeerbeek — 3190': 'boortmeerbeek'
   };
 
   function getCityTranslatedName(rawName, lang) {
@@ -406,7 +410,7 @@
       if (countDisplay) {
         if (!normQuery) {
           const t = window.TRANSLATIONS ? window.TRANSLATIONS[currentLang] : null;
-          countDisplay.textContent = t?.hero?.communesAvailable || '39 zones d\'intervention 24/7';
+          countDisplay.textContent = t?.hero?.communesAvailable || '41 zones d\'intervention 24/7';
         } else {
           countDisplay.textContent = `${matchCount} zone${matchCount > 1 ? 's' : ''} trouvée${matchCount > 1 ? 's' : ''}`;
         }
