@@ -87,7 +87,7 @@ window.TRANSLATIONS = {
       label: "AVIS CLIENTS VÉRIFIÉS <span class=\"gold-stars\">★★★★★</span> (4.8/5)",
       title: "Ils nous ont fait confiance en urgence",
       desc: "Découvrez les retours récents des automobilistes secourus à Bruxelles et Louvain par Dépannage24.be.",
-      googleBadge: "Avis vérifié",
+      googleBadge: "Vérifié",
       r1Author: "Jules L.",
       r1City: "Zaventem",
       r1Text: "« Je suis tombé en panne à Zaventem en pleine soirée. J’ai appelé un service de dépannage et ils sont venus sans traîner. Le gars était sympa et efficace. »",
@@ -246,7 +246,7 @@ window.TRANSLATIONS = {
     },
     gallery: {
       label: "NOS INTERVENTIONS EN IMAGES",
-      title: "Galerie photos de nos dépannages à Bruxelles",
+      title: "Galerie photos de nos dépannages",
       desc: "Découvrez les équipes et dépanneuses Dépannage24.be en intervention quotidienne dans toute la Région de Bruxelles-Capitale et Louvain."
     },
     cta: {
@@ -268,7 +268,7 @@ window.TRANSLATIONS = {
       s5: "Remplacement Pneu Crevé",
       s6: "Livraison Carburant Express",
       legalLine: "Dépannage24.be — Service Agréé d'Assistance Routière et Remorquage Belgique.",
-      legalSub: "Siège opérationnel : Bruxelles et Louvain | Tél : <a href=\"tel:+32492948804\" class=\"text-phone-link\">+32 492 94 88 04</a>",
+      legalSub: "Siège opérationnel : Bruxelles et Louvain | <span style=\"white-space: nowrap;\">Tél : <a href=\"tel:+32492948804\" class=\"text-phone-link\">+32 492 94 88 04</a></span>",
       paymentsTitle: "Moyens de paiement acceptés sur place & à distance",
       paymentCash: "Cash - espèces",
       paymentBank: "Virement Bancaire",
@@ -380,7 +380,7 @@ window.TRANSLATIONS = {
       label: "VERIFIED REVIEWS <span class=\"gold-stars\">★★★★★</span> (4.8/5)",
       title: "Drivers rescued in emergency",
       desc: "Read recent reviews from real drivers rescued in Brussels and Leuven by Dépannage24.be.",
-      googleBadge: "Verified Review",
+      googleBadge: "Verified",
       r1Author: "Jules L.",
       r1City: "Zaventem",
       r1Text: "« I broke down in Zaventem in the evening. I called for roadside assistance, and they arrived pretty quickly. The guy was friendly and efficient. »",
@@ -539,8 +539,8 @@ window.TRANSLATIONS = {
     },
     gallery: {
       label: "OUR INTERVENTIONS IN IMAGES",
-      title: "Photo gallery of our roadside assistance in Brussels",
-      desc: "Discover Dépannage24.be teams and tow trucks on daily interventions throughout the Brussels Capital Region and Leuven."
+      title: "Photo gallery of our breakdown assistance",
+      desc: "Discover Dépannage24.be teams and tow trucks in action every day across Brussels and Leuven."
     },
     cta: {
       title: "Need roadside assistance right now?",
@@ -561,7 +561,7 @@ window.TRANSLATIONS = {
       s5: "Flat Tire Replacement",
       s6: "Express Fuel Delivery",
       legalLine: "Dépannage24.be — Licensed Roadside Assistance & Towing Service Belgium.",
-      legalSub: "Operational headquarters: Brussels & Leuven | Tel: <a href=\"tel:+32492948804\" class=\"text-phone-link\">+32 492 94 88 04</a>",
+      legalSub: "Operational headquarters: Brussels & Leuven | <span style=\"white-space: nowrap;\">Tel: <a href=\"tel:+32492948804\" class=\"text-phone-link\">+32 492 94 88 04</a></span>",
       paymentsTitle: "Accepted payment methods on site & remote",
       paymentCash: "Cash - cash payment",
       paymentBank: "Bank Transfer",
@@ -673,7 +673,7 @@ window.TRANSLATIONS = {
       label: "GEVERIFIEERDE BEOORDELINGEN <span class=\"gold-stars\">★★★★★</span> (4.8/5)",
       title: "Bestuurders geholpen in nood",
       desc: "Lees recente ervaringen van bestuurders die geholpen zijn in Brussel en Leuven door Dépannage24.be.",
-      googleBadge: "Geverifieerde Review",
+      googleBadge: "Geverifieerd",
       r1Author: "Jules L.",
       r1City: "Zaventem",
       r1Text: "« Ik kreeg ’s avonds pech in Zaventem. Ik belde voor pechverhelping en ze waren snel ter plaatse. De man was vriendelijk en werkte vlot. »",
@@ -832,7 +832,7 @@ window.TRANSLATIONS = {
     },
     gallery: {
       label: "ONZE INTERVENTIES IN BEELD",
-      title: "Fotogalerij van onze pechverhelpingen in Brussel",
+      title: "Fotogalerij van onze pechverhelpingen",
       desc: "Ontdek de teams en takelwagens van Dépannage24.be in dagelijkse interventies doorheen het Brussels Hoofdstedelijk Gewest en Leuven."
     },
     cta: {
@@ -854,7 +854,7 @@ window.TRANSLATIONS = {
       s5: "Lekke Bandenwissel",
       s6: "Express Brandstoflevering",
       legalLine: "Dépannage24.be — Erkende Takeldienst & Pechverhelping België.",
-      legalSub: "Operationele zetel: Brussel & Leuven | Tel: <a href=\"tel:+32492948804\" class=\"text-phone-link\">+32 492 94 88 04</a>",
+      legalSub: "Operationele zetel: Brussel & Leuven | <span style=\"white-space: nowrap;\">Tel: <a href=\"tel:+32492948804\" class=\"text-phone-link\">+32 492 94 88 04</a></span>",
       paymentsTitle: "Aanvaarde betaalmethoden ter plaatse & op afstand",
       paymentCash: "Cash - contant",
       paymentBank: "Bankoverschrijving",
