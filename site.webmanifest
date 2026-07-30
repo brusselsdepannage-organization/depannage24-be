@@ -1,6 +1,6 @@
 {
-  "name": "Dépannage Automobile & Remorquage 24/7 | Dépannage24.be",
-  "short_name": "Dépannage24",
+  "name": "MyWebSite",
+  "short_name": "MySite",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#0F172A",
-  "background_color": "#0F172A",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
   "display": "standalone"
 }
