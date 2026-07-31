@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Serve index.html for language paths /fr, /en, /nl
+  RewriteRule ^(fr|en|nl)(/.*)?$ index.html [L,QSA]
+
+  # Fallback for SPA routing
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . index.html [L]
+</IfModule>

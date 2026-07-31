@@ -107,18 +107,57 @@
     }, { passive: true });
   }
 
+  function detectInitialLanguage() {
+    const path = window.location.pathname.toLowerCase();
+    if (path.includes('/nl')) {
+      return 'nl';
+    } else if (path.includes('/en')) {
+      return 'en';
+    } else if (path.includes('/fr')) {
+      return 'fr';
+    }
+    return 'fr';
+  }
+
+  function setLanguage(lang, updateUrl = true) {
+    if (!window.TRANSLATIONS || !window.TRANSLATIONS[lang]) return;
+    currentLang = lang;
+
+    // Update active button state
+    const langBtns = document.querySelectorAll('.lang-btn');
+    langBtns.forEach(b => b.classList.remove('active'));
+    document.querySelectorAll(`.lang-btn[data-lang="${lang}"]`).forEach(b => b.classList.add('active'));
+
+    // Update page content
+    updatePageContent();
+
+    // Update URL path to /fr, /en, or /nl
+    if (updateUrl && window.history && window.history.pushState) {
+      const currentHash = window.location.hash || '';
+      const newPath = '/' + lang + currentHash;
+      if (window.location.pathname !== '/' + lang) {
+        window.history.pushState({ lang: lang }, '', newPath);
+      }
+    }
+  }
+
   function initLanguageSwitcher() {
+    const initialLang = detectInitialLanguage();
+    setLanguage(initialLang, false);
+
     const langBtns = document.querySelectorAll('.lang-btn');
     langBtns.forEach(btn => {
       btn.addEventListener('click', (e) => {
-        const lang = e.target.getAttribute('data-lang');
-        if (lang && window.TRANSLATIONS && window.TRANSLATIONS[lang]) {
-          currentLang = lang;
-          langBtns.forEach(b => b.classList.remove('active'));
-          document.querySelectorAll(`.lang-btn[data-lang="${lang}"]`).forEach(b => b.classList.add('active'));
-          updatePageContent();
+        const lang = e.currentTarget.getAttribute('data-lang');
+        if (lang) {
+          setLanguage(lang, true);
         }
       });
+    });
+
+    window.addEventListener('popstate', () => {
+      const poppedLang = detectInitialLanguage();
+      setLanguage(poppedLang, false);
     });
   }
 
