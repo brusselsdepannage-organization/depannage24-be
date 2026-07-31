@@ -87,6 +87,9 @@
       }
     }
 
+    const initialLang = detectInitialLanguage(redirectPath);
+    setLanguage(initialLang, false);
+
     initLanguageSwitcher();
     initFAQAccordion();
     initQuickForm();
@@ -100,7 +103,6 @@
     initGalleryCarousel();
     initStickyHeader();
     initSchemaOrg();
-    updatePageContent();
   });
 
   function initStickyHeader() {
@@ -116,13 +118,17 @@
     }, { passive: true });
   }
 
-  function detectInitialLanguage() {
-    const path = window.location.pathname.toLowerCase();
-    if (path.includes('/nl')) {
+  function detectInitialLanguage(overridePath) {
+    const pathStr = (overridePath || window.location.pathname || '') + ' ' + (window.location.search || '') + ' ' + (window.location.hash || '');
+    const path = pathStr.toLowerCase();
+    
+    if (path.includes('/nl') || path.includes('lang=nl') || path.includes('#nl')) {
       return 'nl';
-    } else if (path.includes('/en')) {
+    }
+    if (path.includes('/en') || path.includes('lang=en') || path.includes('#en')) {
       return 'en';
-    } else if (path.includes('/fr')) {
+    }
+    if (path.includes('/fr') || path.includes('lang=fr') || path.includes('#fr')) {
       return 'fr';
     }
     return 'fr';
@@ -151,9 +157,6 @@
   }
 
   function initLanguageSwitcher() {
-    const initialLang = detectInitialLanguage();
-    setLanguage(initialLang, false);
-
     const langBtns = document.querySelectorAll('.lang-btn');
     langBtns.forEach(btn => {
       btn.addEventListener('click', (e) => {
