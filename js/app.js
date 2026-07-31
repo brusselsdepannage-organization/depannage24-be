@@ -78,6 +78,15 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
+    // Handle GitHub Pages SPA redirection from 404.html
+    const redirectPath = sessionStorage.getItem('ghp_spa_redirect');
+    if (redirectPath) {
+      sessionStorage.removeItem('ghp_spa_redirect');
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, '', redirectPath);
+      }
+    }
+
     initLanguageSwitcher();
     initFAQAccordion();
     initQuickForm();
