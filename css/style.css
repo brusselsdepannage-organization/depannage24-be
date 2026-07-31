@@ -1809,6 +1809,18 @@ img {
   cursor: pointer;
 }
 
+.faq-icon {
+  font-size: 0.8rem;
+  color: var(--brand-yellow);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
 .faq-answer {
   max-height: 0;
   overflow: hidden;
@@ -1820,7 +1832,7 @@ img {
 }
 
 .faq-item.active .faq-answer {
-  max-height: 500px;
+  max-height: 800px;
   padding: 0 20px 16px 20px;
 }
 

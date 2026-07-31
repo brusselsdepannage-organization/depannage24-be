@@ -582,6 +582,21 @@
 
   function initFAQAccordion() {
     const faqItems = document.querySelectorAll('.faq-item');
+    if (!faqItems.length) return;
+
+    // Mobile: close all questions by default. Desktop: keep 1st question open by default.
+    if (window.innerWidth <= 768) {
+      faqItems.forEach(item => item.classList.remove('active'));
+    } else {
+      faqItems.forEach((item, index) => {
+        if (index === 0) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+    }
+
     faqItems.forEach(item => {
       const q = item.querySelector('.faq-question');
       if (q) {
