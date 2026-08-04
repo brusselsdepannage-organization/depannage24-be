@@ -222,6 +222,16 @@
 
   function openWhatsApp(msgText) {
     const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msgText)}`;
+
+    // Push event to Google Tag Manager dataLayer so GTM receives WhatsApp click events
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'whatsapp_click',
+      event_category: 'engagement',
+      event_label: 'WhatsApp Button',
+      whatsapp_url: waUrl
+    });
+
     const win = window.open(waUrl, '_blank');
     if (!win || win.closed || typeof win.closed === 'undefined') {
       window.location.href = waUrl;
@@ -618,7 +628,6 @@
     locationBtns.forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
-        e.stopPropagation();
         
         const directText = currentLang === 'fr'
           ? "Bonjour, j'ai besoin d'un dépannage d'urgence."
